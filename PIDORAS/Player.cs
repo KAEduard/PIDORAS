@@ -1,19 +1,16 @@
-﻿namespace A_character_with_a_point_spread;
-
-public class Player : ICharacteristics
+﻿namespace PIDORAS
 {
-    public string Name { get; set; }
-    public int Armor { get; set; }
-    public int Hp { get; set; }
-    public int Attack { get; set; }
-    public int Points { get; set; }
-
-    public Player(string name, int armor, int hp, int attack, int points)
+    public class Player
     {
-        Name = name;
-        Armor = armor;
-        Hp = hp;
-        Attack = attack;
-        Points = points;
+        public string Name { get; set; }
+
+        public Stats Characteristics { get; set; }
+
+        public Player(string name)
+        {
+            Name = name;
+            Characteristics = new Stats(1, 1, 1, 1);
+
+        }
     }
 }
